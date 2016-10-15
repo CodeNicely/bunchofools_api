@@ -31,7 +31,7 @@ $return['slider_data'] = $slider_data;
 $page_ID = '822748944431650';
 $limit = 20;
 
-$access_token = '{access-token}';
+$access_token = '{access-token}'; //Important!!!! -- do not use user token. user tokens get expired. Use app tokens, they do not expire
 
 if($json = curl_helper('https://graph.facebook.com/'.$page_ID.'/posts?fields=attachments&limit='.$limit.'&access_token='.$access_token)) {
 $return['message'] = "success";
